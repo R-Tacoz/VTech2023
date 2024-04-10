@@ -5,7 +5,7 @@ from typing import Callable
 from collections.abc import Iterable
 
 import wmi
-from tqdm import tqdm
+from tqdm.notebook import tqdm
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -377,7 +377,7 @@ def train_topicmtm(
     model.train()
     epoch_loss, epoch_acc, acc_dif, val_acc = torch.zeros(1),torch.zeros(1),torch.zeros(1), torch.zeros(1)
     f1micro, f1macro = 0,0
-    epoch_iterator = tqdm(range(num_epochs), "Training", ncols=120) if not verbose else range(num_epochs)
+    epoch_iterator = tqdm(range(num_epochs), "Training") if not verbose else range(num_epochs)
     for epoch in epoch_iterator:
         if epoch % 100 == 0:
             temperature_infos = w.Sensor()

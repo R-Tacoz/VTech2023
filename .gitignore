@@ -1,0 +1,12 @@
+*.log
+.ipynb_checkpoints/
+__pycache__/
+bysubredditdata/
+Comments/
+Conference/
+data/
+models/
+RedditDataDump/
+screenshots/
+OpenHardwareMonitorLib.dll
+Shailik_Basic Mult--task.ipynb
